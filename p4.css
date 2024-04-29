@@ -1,0 +1,233 @@
+body{
+    background-color: white;
+    padding : 0;
+    margin : 0;
+}
+
+#start-page{
+    opacity : 1;
+    width:800px;
+    height : 600px;
+    background-color: rgb(247, 247, 213) ;
+}
+
+.container-game{
+    width:800px;
+    height : 645px;
+    margin : auto;
+    margin-top : 25px;
+    background-color: white;}
+
+
+
+.start-btn {
+    padding: 0.5em 2em 0.5em 2.5em;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 15px;
+    color: #fff6fb;
+    background-color: #0D47A1; /* Survol en bleu Hanovre */
+    letter-spacing: 0.3em;
+    text-shadow: -2px 2px 5px #0c0151b1;
+    border: 2px solid #929ae9;
+    box-shadow: 0 0 0px 1px #2512f1,
+      0 0 10px 2px #3045fd,
+      inset 0 0 0px 1px #124ef1,
+      inset 0 0 10px 2px #4830fd;
+    transition: 100ms;
+  }
+  
+  .start-btn:hover {
+    background-color: #1A237E; /* Utilisation du bleu indigo */
+
+      box-shadow: 0 0 0px 1px #fcfed9,
+      0 0 10px 2px #f4f6df,
+      inset 0 0 0px 1px #124ef1,
+      inset 0 0 10px 2px #4830fd;
+    transform: translateY(-5px);
+  }
+  
+  .start-btn:active {
+    box-shadow: 0 0 0px 1px #fcfed9,
+    0 0 10px 2px #f4f6df,
+    inset 0 0 0px 1px #e3eb93,
+    inset 0 0 10px 2px #fde530;
+    transform: translateY(1px);
+  }
+
+  #game-page{
+    position :relative;
+    opacity : 0;
+    width:800px;
+    height:645px; 
+    background-color: rgb(254, 255, 252);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-around;
+}
+
+.select-dp{
+    position: relative;
+    align-self: center;
+    width: 574px;
+    height: 120px;
+    display : flex;
+    justify-content: center;
+}
+
+#winner{
+    opacity: 0;
+    position : absolute;
+    top : 0;
+    left:0;
+    width:800px;
+    height:645px;
+    background-color: rgba(237, 248, 250, 0.656);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+#win-pannel{
+    margin-top: 80px;
+    width:250px;
+    height:130px;
+    background-color: #ffffffec;
+    border : 2px solid white;
+    border-radius: 12% 12% 12% 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#win-anct{
+    font-family:  Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 145%;
+    height : 15px;
+}
+
+#win-pannel .start-btn{
+    margin-bottom: 10px;
+}
+
+@keyframes rotation{
+    from{
+        rotate:0deg
+    }to{
+        rotate:360deg
+    }
+}
+
+
+#container-seldisc{
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    border: 5px dashed rgb(128, 6, 6);
+    position : absolute;
+    bottom : 10px;
+    left : 246px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    animation: rotation 10s linear infinite;
+}
+
+#select-disc{
+    width:70px;
+    margin: auto;
+    height:70px;
+    background-color: rgb(181, 12, 12);
+    box-shadow: 0 0 0px 1px #fcfed9,
+    0 0 10px 2px #f4f6df,
+    inset 0 0 0px 1px #f12512,
+    inset 0 0 10px 2px rgb(220, 49, 49);
+    border-radius: 50%;
+}
+
+
+
+
+.hole{
+    width:70px;
+    height: 70px;
+    box-shadow:2px 2px #00042e;
+    border : 2px dashed white ;
+    margin :4px;
+    border-radius: 50%;
+    background-color: #929ae9;
+}
+
+
+
+
+
+#gameboard{
+    width:574px;
+    border-radius: 2% 2% 2% 2%;
+    height :492px;
+    margin : auto; 
+    margin-bottom : 25px;
+    background-color: rgb(31, 14, 126);
+    box-shadow: 2px 2px #00042e;
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 colonnes de largeur égale */
+    grid-gap: 0px; /* Espacement entre les cellules */
+    justify-content: center;
+}
+
+
+@keyframes bounce {
+    from {
+        bottom : 10px;
+    }25%{
+        bottom : 27px;
+    } 50% {
+        bottom : 30px ;
+    } 75%{
+        bottom : 27px;
+    } to {
+        bottom : 10px;
+    }
+
+}
+
+.bounce{
+    animation: bounce 0.5s, rotation 10s linear infinite !important
+}
+
+
+
+.sommaire {
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 400%;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding-top : 2px;
+    padding-bottom : 4px;
+    background-color: black;
+    color: yellow;
+}
+
+.sommaire p{
+    font-size: 50%;
+    margin-top : 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.sommaire a{
+    color:yellow;
+}
+
+
+
